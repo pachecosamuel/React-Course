@@ -1,8 +1,7 @@
 .App {
   text-align: center;
-  font-weight: 900;
-  text-shadow: 5px #61dafb;
-  background-color: cornflowerblue;
+  background-color: antiquewhite;
+  border: 5px solid salmon;
 }
 
 .App-logo {
