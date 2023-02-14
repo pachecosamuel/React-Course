@@ -1,4 +1,6 @@
 # React-Course
+![react-logo@3x](https://user-images.githubusercontent.com/87822546/218772052-61f43800-cd00-4498-ac67-29a7271d2dae.svg)
+
 Welcome to the complete React course, in this course you will learn from the most basic to the most advanced features of the most famous library in the front-end universe.
 
 https://www.udemy.com/course/react-do-zero-a-maestria-c-hooks-router-api-projetos/
@@ -69,4 +71,4 @@ Create projects with React and Firebase
 Create applications with MERN (MongoDB, Express, React and Node)
 Create projects with React and Redux
 
-![react-logo@3x](https://user-images.githubusercontent.com/87822546/218772052-61f43800-cd00-4498-ac67-29a7271d2dae.svg)
+
