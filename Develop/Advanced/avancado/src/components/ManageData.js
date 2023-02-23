@@ -11,7 +11,7 @@ const ManageData = () => {
     return (
         <div>
             <div>
-                <p>Number = {7}</p>
+                <p>Number = {someData}</p>
                 <button onClick={() => (someData = 15)} >Change value</button>
             </div>
 
