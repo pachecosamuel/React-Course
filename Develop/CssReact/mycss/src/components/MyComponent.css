@@ -10,3 +10,18 @@
     font-weight: bold;
     background-color: black;
 }
+
+.my-style-button
+{
+    height: 50px;
+    width: 150px;
+    background: linear-gradient(to bottom, #1a1a1a, #8b0000);
+    border: none;
+    border-radius: 7.5px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -38,7 +38,7 @@ function App() {
     console.log("Evento de click");
   };
 
-  const [message, setNewMessage] = useState("");
+  const [message, setNewMessage] = useState("Empty");
 
   const handleMessage = (msg) =>
   {
@@ -49,14 +49,14 @@ function App() {
     <div className="App">
       <h3>Avançado no reactzada pai!</h3>
 
-      {people.map((person) => (
+      {/* {people.map((person) => (
         <UserDetails 
           key={person.id}
           name={person.name}
           age={person.age}
           job={person.job}
         />
-      ))}
+      ))} */}
 
       {/* State Lift */}
       {/* <MyMessage msg={message} />

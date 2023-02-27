@@ -2,9 +2,20 @@
   text-align: center;
 }
 
-h2{
-  color: red;
-  background-color: bisque;
+.title-1
+{
+  background-color: #282c34;
+  border: 2px dotted #61dafb;
+  color: #FFF;
+  padding: 10px;
+}
+
+.title-2
+{
+  background-color: rosybrown;
+  border: 2px solid black;
+  color: #001;
+  padding: 20px;
 }
 
 .App-logo {
