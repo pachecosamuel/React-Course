@@ -1,0 +1,25 @@
+.my_form
+{
+    width: 500px;
+    margin: 0 auto;
+
+    padding: 5px;
+    border: 1px solid red;
+    
+    text-align: left;
+}
+
+.my_label
+{
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+input,
+textarea,
+select
+{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}

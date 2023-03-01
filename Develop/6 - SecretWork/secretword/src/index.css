@@ -1,0 +1,37 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: linear-gradient(180deg, 
+  rgb(17, 136, 188) 0%,
+  rgb(1, 13, 25) 100%
+  );
+  color: aliceblue;
+}
+
+button{
+  color: #fff;
+  padding: 2.5px 45px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: .4s;
+  
+  background: linear-gradient(180deg, 
+  rgb(128, 206, 240) 0%,
+  rgb(13, 69, 125) 100%
+  );
+}
+
+button:hover
+{
+  background: rgb(13, 69, 125);
+}
