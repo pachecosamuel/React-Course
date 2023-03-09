@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "BMW X1",
+      "price": "100000",
+      "id": 4
+    },
+    {
+      "name": "Mercedez L100",
+      "price": "200000",
+      "id": 5
+    },
+    {
+      "name": "Lamborghini Horus",
+      "price": "300000",
+      "id": 6
+    },
+    {
+      "name": "Ferrari",
+      "price": "400000",
+      "id": 7
+    },
+    {
+      "name": "Iphone 14 Pro Max",
+      "price": "6000",
+      "id": 8
+    },
+    {
+      "name": "AirPods",
+      "price": "1000",
+      "id": 10
+    }
+  ]
+}
