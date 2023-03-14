@@ -13,19 +13,10 @@ function App() {
   const [price, setPrice] = useState("");
 
   // 4 - Custom hook
-  const { data: items, httpConfig } = useFetch(url);
+  const { data: items, httpConfig, loading, error } = useFetch(url);
 
   // 1 - Requesting data 
-  /*useEffect(() => {
-    async function getData() {
-      const response = await fetch(url);
-      const data = await response.json();
-      setProducts(data);
-    }
-    getData();
-  }, []);*/
-
-
+  // it was moved to useFetch
 
   // 2 - Add products to our "database"
   const handleSubmit = async (e) => {
@@ -35,6 +26,12 @@ function App() {
       name: name,
       price,
     };
+
+    // 5 - Refactoring the post
+    httpConfig(product, "POST");
+
+    setName("");
+    setPrice("");
 
     /*const response = await fetch(url, {
       method: "POST",
@@ -47,25 +44,23 @@ function App() {
     // 3 - Carregamento dinâmico
     // const addedProduct = await response.json();
     // setProducts((prevProducts) => [...prevProducts, addedProduct]);
-
-    // 5 - Refactoring the post
-    httpConfig(product, "POST");
-
-
-    setName("");
-    setPrice("");
   };
 
 
   return (
     <div className="App">
       <h1>Product list</h1>
-      <ul>
+
+      {/* 6 - Loading */}
+      {loading && <p>Loading data ...</p>}
+      {/* 7 - Error */}
+      {error && <p>{error}</p>}
+      {!error && (<ul>
         {/* 4 - Custom hook e if ternário para verificar se a lista é != null */}
         {items && items.map((product) => (
           <li key={product.id}>{product.name} - R$: {product.price}</li>
         ))}
-      </ul>
+      </ul>)}
 
       <br />
       <br />
@@ -91,10 +86,10 @@ function App() {
             />
           </label>
 
-          <input
-            type="submit"
-            value="criar"
-          />
+          {/* 7 - State de loading no post */}
+          {loading && <input type="submit" disabled value="Aguarde" />}
+          {!loading && <input type="submit" value="Criar" />}
+
         </form>
       </div>
 

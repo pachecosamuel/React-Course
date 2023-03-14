@@ -9,6 +9,12 @@ export const useFetch = (url) => {
     const [method, setMethod] = useState(null);
     const [callFetch, setCallFetch] = useState(false);
 
+    // 6 - Loading
+    const [loading, setLoading] = useState(false);
+
+    // 7 - Treating errors
+    const [error, setError] = useState(null);
+
     const httpConfig = (data, method) => {
 
         if (method === "POST") {
@@ -19,17 +25,28 @@ export const useFetch = (url) => {
                 },
                 body: JSON.stringify(data),
             });
-
-            setMethod(method);
+            setMethod("POST");
         };
     };
 
     // Get na api
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(url);
-            const responseJson = await response.json();
-            setData(responseJson);
+            // 6 - Loading
+            setLoading(true);
+
+            // 8 - Tratamento de erros e exceções
+            try {
+                const response = await fetch(url);
+                const responseJson = await response.json();
+                setData(responseJson);
+            } catch (error) {
+                console.log(error.message);
+                setError("Something went wrong!");
+            }
+
+            // 6 - Loading
+            setLoading(false);
         };
 
         fetchData();
@@ -50,5 +67,5 @@ export const useFetch = (url) => {
         httpRequest();
     }, [config, method, url]);
 
-    return { data, httpConfig };
+    return { data, httpConfig, loading, error };
 };

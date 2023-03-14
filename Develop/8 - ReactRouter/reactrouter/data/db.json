@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "name": "BMW X1",
+        "price": "100000",
+        "id": 1
+      },
+      {
+        "name": "Mercedez L100",
+        "price": "200000",
+        "id": 2
+      },
+      {
+        "name": "Lamborghini Horus",
+        "price": "300000",
+        "id": 3
+      }
+    ]
+  }
