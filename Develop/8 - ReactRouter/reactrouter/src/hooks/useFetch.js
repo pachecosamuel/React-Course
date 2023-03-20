@@ -101,7 +101,7 @@ export const useFetch = (url) => {
     };
 
     httpRequest();
-  }, [config]);
+  }, [config, itemId, method, url]);
 
   console.log(config);
 

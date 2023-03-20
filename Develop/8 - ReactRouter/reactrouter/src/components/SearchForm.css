@@ -1,0 +1,9 @@
+form{
+    display: grid;
+    justify-content: center;
+}
+
+form input{
+    margin: 0.4em;
+    width: 200px;
+}

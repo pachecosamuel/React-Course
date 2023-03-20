@@ -1,7 +1,9 @@
 nav {
     display: flex;
     justify-content: center;
-    border: 1.5px solid red;
+    border: 2px solid rgb(105, 7, 7);
+    border-radius: 25px;
+    margin-bottom: 1em;
 }
 
 nav a {
@@ -9,13 +11,14 @@ nav a {
     padding: 5px;
     text-decoration: none;
     color: #000;
+    transition: 0.4s;
 }
 
 nav a:hover {
     color: #ccc;
 }
 
-.active{
+nav a:active{
     background-color: #000;
     color: #fff;
 }

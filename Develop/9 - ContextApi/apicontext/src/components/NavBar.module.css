@@ -1,0 +1,27 @@
+.mynavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    padding: 0.3em;
+    margin: 1em;
+
+    border: 2px solid salmon;
+    border-radius: 5em;
+}
+
+.mynavbar a{
+    padding: 0.1em 1em;
+    margin: 0 1em;
+    color: #000;
+    transition: 0.5s;
+
+    text-decoration: none;
+}
+
+.mynavbar a:hover{
+    color: #f7f5f5;
+    background-color: #000;
+    border-radius: 5em;
+}
