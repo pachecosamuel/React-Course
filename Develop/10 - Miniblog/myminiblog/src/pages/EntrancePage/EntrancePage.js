@@ -20,6 +20,7 @@ const EntrancePage = () => {
             <NavBar/>
                 <div className={styles.container}>
                     <Routes >
+                        <Route path="/" element={<Home />}/>
                         <Route path="/home" element={<Home />}/>
                         <Route path="/about" element={<About />}/>
                         <Route path="/register" element={<Register />}/>
