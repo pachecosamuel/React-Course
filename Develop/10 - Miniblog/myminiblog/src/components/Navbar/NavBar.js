@@ -3,8 +3,12 @@ import styles from './Navbar.module.css';
 
 // resources
 import { NavLink } from "react-router-dom";
+import { useAuthentication } from "../../hooks/useAuthentication";
+import { useAuthValue } from "../../context/AuthContext";
 
 const NavBar = () => {
+    const { user } = useAuthValue();
+    
     return (
         <nav className={styles.navbar}>
             <NavLink to="/" className={styles.brand}>
@@ -20,24 +24,50 @@ const NavBar = () => {
                     </NavLink>
 
                 </li>
-                <li>
-                    <NavLink
-                        to="/login"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >
-                        Login
-                    </NavLink>
+                {!user && (
+                    <>
+                        <li>
+                            <NavLink
+                                to="/login"
+                                className={({ isActive }) => (isActive ? styles.active : "")}
+                            >
+                                Login
+                            </NavLink>
 
-                </li>
-                <li>
-                    <NavLink
-                        to="/register"
-                        className={({ isActive }) => (isActive ? styles.active : "")}
-                    >
-                        Register
-                    </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/register"
+                                className={({ isActive }) => (isActive ? styles.active : "")}
+                            >
+                                Register
+                            </NavLink>
 
-                </li>
+                        </li>
+                    </>
+                )}
+                {user && (
+                    <>
+                    <li>
+                        <NavLink
+                            to="/posts/create"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            New post
+                        </NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/dashboard"
+                            className={({ isActive }) => (isActive ? styles.active : "")}
+                        >
+                            Dashboard
+                        </NavLink>
+
+                    </li>
+                </>
+                )}
                 <li>
                     <NavLink
                         to="/about"
