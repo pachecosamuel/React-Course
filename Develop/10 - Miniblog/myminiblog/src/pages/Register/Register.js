@@ -88,9 +88,9 @@ const Register = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </label>
-                <button className="btn">
-                    Register
-                </button>
+                
+                {!loading && <button className="btn"> Register </button>}
+                {loading && <button className="btn" disabled> Wait </button>}
                 {error && <p className="error">{error}</p>}
             </form>
         </div>

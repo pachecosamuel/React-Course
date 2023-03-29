@@ -9,6 +9,7 @@ input::placeholder,
 textarea::placeholder {
     font-family: "Montserrat", sans-serif;
     color: #aaa;
+    padding-left: 0.2em;
 }
 
 input:focus,
@@ -24,7 +25,7 @@ nav button {
     border: none;
     color: #000;
     transition: 0.4s;
-    font-size: 1em;
+    font-size: 1.1em;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
 }
@@ -34,8 +35,9 @@ nav button:hover {
     color: #bbb;
 }
 
+/* Form style  */
 form {
-    max-width: 50%;
+    max-width: 55%;
     margin: 0 auto;
 }
 
@@ -56,7 +58,7 @@ textarea {
     box-sizing: border-box;
     border: none;
     border-bottom: 2.5px solid #ccc;
-    padding: 0.8em 0em;
+    padding: 0.9em 0em;
     background-color: transparent;
 }
 
@@ -69,7 +71,7 @@ textarea {
     border: none;
     font-weight: bold;
 
-    width: 120px;
+    width: 130px;
     border-radius: 2em;
     padding: 10px 15px;
     font-size: 1em;
