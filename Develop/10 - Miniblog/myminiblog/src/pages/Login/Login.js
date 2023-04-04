@@ -8,7 +8,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const { createUser, error: authError, loading, auth } = useAuthentication();
+    const { login, error: authError, loading, auth } = useAuthentication();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +20,7 @@ const Login = () => {
             password,
         };
 
-        const response = await createUser(user);
+        const response = await login(user);
 
         console.log(response);
     };
@@ -58,8 +58,6 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-
-
                 {!loading && <button className="btn"> Login </button>}
                 {loading && <button className="btn" disabled> Wait </button>}
                 {error && <p className="error">{error}</p>}
